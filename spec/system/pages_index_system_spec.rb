@@ -7,8 +7,11 @@ RSpec.describe "Exchange Currency Process", :type => :system, js: true do
       select('EUR', from: 'source_currency')
       select('USD', from: 'target_currency')
       fill_in 'amount', with: '10'
+      click_button 'CONVERTER'
+      select('EUR', from: 'source_currency')
+      select('USD', from: 'target_currency')
     end
-    click_button 'Botão para inverter a moeda'
+    
  
     # save_and_open_page
     expect(page).to have_content("value")
