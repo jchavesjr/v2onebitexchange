@@ -4,7 +4,7 @@
       border: 0;
    
       .card-header{
-        background-color: #878d99;
+        background-color: blue;
         border-radius: 0;
         color: white;
         font-weight: 700;
@@ -20,10 +20,14 @@
         }
    
         .btn-exchange{
-          background-color: #5bc0de;
-          border-color: #5bc0de;
+          background-color: blue;
+          border-color: blue;
           border-radius: 0;
         }
+      }
+      .botao-inverter{
+        padding-left:  17%;
+        padding-bottom: 3%;
       }
     }
   }
