@@ -9,18 +9,16 @@ RSpec.describe 'Exchanges', type: :request do
     end
   end
 
-
-  describe 'GET #convert' do
+  describe 'GET #convert_bitcoin' do
     before do
-      @amount = rand(1..9999)
+      @amount_bitcoin = 1
     end
 
-    it 'returns http success' do
+    it 'returns http success bitcoin' do
       get '/', params: {
-                        source_currency: "USD",
-                        target_currency: "BRL",
-                        amount: @amount
-                      }
+                    to_currency_bitcoin: "BRL",
+                    amount_bitcoin: @amount_bitcoin
+                  }
       expect(response).to have_http_status(200)
     end
   end
